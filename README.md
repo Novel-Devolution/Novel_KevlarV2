@@ -1,4 +1,4 @@
-# [Novel_KevlarV2] 📝  
+# Novel_KevlarV2 📝  
 Novel Kevlar v2 offers not only a revision of the code but also new and improved functions. With Novel Kevlar V2, other developers can easily change or configure something. The code is no longer static
 
 ## Get Started 🚀  
