@@ -65,6 +65,12 @@ end
 
 
 function GetPlayerLicense(playerId, type)
+    if Config.UseMultiChar then
+        Debug("GetPlayerLicense use the multichar mode!")
+        local xPlayer = ESX.GetPlayerFromId(playerId)
+        return xPlayer.getIdentifier()
+    end
+
     local identifiers = GetPlayerIdentifiers(playerId)
     local licenseIdentifier = "no_found"
 
