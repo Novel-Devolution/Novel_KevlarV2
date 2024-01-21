@@ -9,6 +9,7 @@ Config.ESXTrigger = function()
 end
 
 Config.Debug = true
+Config.UseMultiChar = false
 
 Config.Loader = {
     SaveKevlar = true,
