@@ -43,13 +43,13 @@ function GetPlayerKevlar(playerId)
     local identifier = GetPlayerLicense(playerId, "license")
     local amount = MySQL.Sync.fetchAll("SELECT `kevlar` FROM `users` WHERE `identifier` = @identifier LIMIT 1",{
         ["@identifier"] = identifier
-    })[1].kevlar
+    })
     Debug(string.format("get player kevlar -> identifier: %s kevlar: %s",identifier, amount))
     if amount == nil or amount == 0 then 
         return 0
     end
 
-    return amount
+    return amount[1].kevlar
 end
 
 function SetPlayerKevlar(playerId, armour, saveDB)

@@ -1,5 +1,7 @@
 Config = {}
 
+Config.useIlleniumAppearance = GetResourceState("illenium-appearance") ~= 'missing' 
+
 Config.ESXTrigger = function()
     local ESX = nil
     

@@ -17,6 +17,14 @@ function SetKevlarSkin(kevlar, job)
     TriggerEvent(Config.Events["getSkin"], function(skinData)
         if skinData ~= nil then
             Debug(string.format("set skin data -> bproof_1: %s bproof_2: %s", kevlarSkin[gender]["bproof_1"], kevlarSkin[gender]["bproof_2"]))
+            if Config.useIlleniumAppearance then
+                local uniform = {
+                    bproof_1 = kevlarSkin[gender]["bproof_1"],
+                    bproof_2 = kevlarSkin[gender]["bproof_2"]
+                }
+                TriggerEvent("skinchanger:loadClothes", skinData, uniform)
+                return
+            end
             skinData['bproof_1'] = kevlarSkin[gender]["bproof_1"]
             skinData['bproof_2'] = kevlarSkin[gender]["bproof_2"]
             TriggerEvent(Config.Events["loadSkin"], skinData)
